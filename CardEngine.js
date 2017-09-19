@@ -10,6 +10,5 @@ class CardEngine {
       player = move.player;
       cards = move.cards;
     }
-
   }
 }

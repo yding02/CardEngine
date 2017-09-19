@@ -3,10 +3,6 @@ class CurrentPlayer extends VisiblePlayer {
     super(name, cards, team);
   }
 
-  renderPlayer(position) {
-
-  }
-
   renderCards(position) {
     //display all cards
   }

@@ -3,10 +3,6 @@ class VisiblePlayer extends Player {
     super(name, cards, team);
   }
 
-  renderPlayer(position) {
-
-  }
-
   renderCards(position) {
     //Make cards visible
   }

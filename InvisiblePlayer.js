@@ -3,10 +3,6 @@ class InvisiblePlayer extends Player {
     super(name, cards, team);
   }
 
-  renderPlayer(position) {
-
-  }
-
   renderCards(position) {
     //render cards but make invisible
   }

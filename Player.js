@@ -9,7 +9,14 @@ class Player {
   } 
 
   renderPlayer(position) {
-    throw "not implemented";
+    context.beginPath();
+    context.save();
+    context.translate(position.x, position.y);
+    context.rotate(position.angle);
+    context.textAlign="center";
+    context.fillText(this.name, 0, 0);
+    context.restore();
+    context.closePath();
   }
 
   renderCards(position) {

@@ -1,7 +1,15 @@
 SUITS = ["diamond", "club", "heart", "spade", "joker"]
 NUMBERS = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"]
 SPECIAL = ["SMALL JOKER", "BIG JOKER"]
-CARD_SIZE = 0.01;
+
+CANVAS_SIZE = 720;
+FONT_SIZE = 15;
+
+var canvas = document.createElement("canvas");
+canvas.height = CANVAS_SIZE;
+canvas.width = CANVAS_SIZE;
+var context = canvas.getContext("2d");
+document.body.appendChild(canvas);
 
 function numberToCard(number) {
   var card = {};
@@ -16,8 +24,4 @@ function numberToCard(number) {
     card.number = null;
   }
   return card;
-}
-
-function renderCard(card, position, angle) {
-  
 }

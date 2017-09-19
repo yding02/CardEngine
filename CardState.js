@@ -5,12 +5,16 @@ class CardState {
 
   renderPlayers() {
     var numPlayers = this.players.length;
-    for (playerIndex in this.players) {
-      player = this.players[playerIndex];
-      var angle = 270 + (360 / numPlayers * playerIndex);
-      player.renderPlayer(angle);
+    for (var playerIndex in this.players) {
+      var player = this.players[playerIndex];
+      var position = {};
+      var angle = Math.PI * 2 / numPlayers * playerIndex;
+      position.x = Math.round(CANVAS_SIZE * 0.5 + (CANVAS_SIZE  * 0.5 - FONT_SIZE) * Math.sin(angle));
+      position.y = Math.round(CANVAS_SIZE * 0.5 + (CANVAS_SIZE * 0.5 - FONT_SIZE) * Math.cos(angle));
+      position.angle = -angle; //Canvas rotations are weird
+      console.log(position);
+      console.log(player);
+      player.renderPlayer(position);
     }
-  }
-
-
+  }  
 }

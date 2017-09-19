@@ -5,7 +5,7 @@ class CardEngine {
     this.players = deal.dealCards()
   }
 
-  function playMove(move) {
+  playMove(move) {
     if (validMove.valid(move)) {
       player = move.player;
       cards = move.cards;
